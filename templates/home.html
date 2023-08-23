@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kasper's start</title>
+    <style>
+      h1 {
+        font-size: 40px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(50,50,50);
+        text-align: center;
+      }
+
+      #banner {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+      }
+
+      h2 {
+        font-family: Roboto;
+        font-size: 32px;
+        color: rgb(100, 100, 100);
+        text-align: cencenter     }
+
+      .bodytext {
+        font-family: Roboto;
+       colorrgb(80, 80, 80));
+      }
+
+      #container{
+        max-width: 720px;
+        margin: 0 auto 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='container'>
+      <h1 class='text-center mt-2 mb-4'>{{company_name}}'s Careers</h1>
+      <img class='img-fluid' id='banner' src='https://flask-tutorial.kducknice.repl.co/static/images/img.jpeg' alt='HTML Dog'/>
+      <h2 class='text-center mt-2 mb-4'>About</h2>
+      <p class='bodytext'>Whatever</p>
+      <h2 class='text-center mt-2 mb-4'>Open Careers</h2>
+      <p>
+        {% for job in jobs%}
+         {% include 'jobitem.html' %}
+        {% endfor %}
+      </p>
+      <div style='text-align:center;'>
+        <button class='btn btn-primary btn-lg'>Contact Us</button>
+        <p class='bodytext'>Copyright 2022, Jovian</p>
+      </div>
+    </div>
+  </body>
+</html>
